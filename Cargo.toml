@@ -1,0 +1,13 @@
+[package]
+name = "lisel"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.4", features = ["derive"] }
+env_logger = "0.11.3"
+log = "0.4.21"
+nom = "7"
+regex = "1.10.4"
+tempfile = "3.10.1"
+thiserror = "1.0.60"
