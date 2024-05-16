@@ -10,7 +10,7 @@ use std::mem;
 #[derive(Parser, Debug)]
 #[command(version, about)]
 struct Cli {
-    /// Target filenames, accepts one or two filenames.
+    /// Target filenames, accepts one (INDEX) or two filenames (INDEX and TARGET).
     ///
     /// 2 files:
     /// The first file is INDEX, the second is TARGET.
