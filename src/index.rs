@@ -19,7 +19,7 @@ impl Type {
     }
     pub fn start(&self) -> u32 {
         match &self {
-            Type::Re(_) => std::u32::MIN,
+            Type::Re(_) => u32::MIN,
             Type::Number(r) => match r {
                 Range::Single(n) => *n,
                 Range::Interval(s, _) => *s,
@@ -28,7 +28,7 @@ impl Type {
     }
     pub fn end(&self) -> u32 {
         match &self {
-            Type::Re(_) => std::u32::MAX,
+            Type::Re(_) => u32::MAX,
             Type::Number(r) => match r {
                 Range::Single(n) => *n,
                 Range::Interval(_, e) => *e,

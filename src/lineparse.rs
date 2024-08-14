@@ -39,12 +39,12 @@ fn single(input: &str) -> IResult<&str, Range> {
 
 fn interval_left_open(input: &str) -> IResult<&str, Range> {
     let (input, value) = preceded(tag(","), natural)(input)?;
-    Ok((input, Range::Interval(std::u32::MIN, value)))
+    Ok((input, Range::Interval(u32::MIN, value)))
 }
 
 fn interval_right_open(input: &str) -> IResult<&str, Range> {
     let (input, value) = terminated(natural, tag(","))(input)?;
-    Ok((input, Range::Interval(value, std::u32::MAX)))
+    Ok((input, Range::Interval(value, u32::MAX)))
 }
 
 fn interval(input: &str) -> IResult<&str, Range> {
