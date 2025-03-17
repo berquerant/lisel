@@ -7,7 +7,7 @@ edition = "2021"
 clap = { version = "4.5.32", features = ["derive"] }
 env_logger = "0.11.6"
 log = "0.4.26"
-nom = "7"
+nom = "8"
 regex = "1.11.1"
 tempfile = "3.15.0"
 thiserror = "2.0.12"
